@@ -1,11 +1,11 @@
 {
   "name": "talk-a-tive",
   "version": "1.0.0",
-  "description": "",
+  "description": "MERN Chat App",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm install && npm run build"
   },
   "author": "Toh Jing Qiang",
   "license": "ISC",
@@ -18,7 +18,9 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.3",
-    "nodemon": "^2.0.15",
     "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
