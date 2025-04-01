@@ -11,6 +11,7 @@ const colors = require("colors");
 const app = express();
 
 dotenv.config();
+console.log("🔍 Debug - process.env.MONGO_URI:", process.env.MONGO_URI);
 connectDB();
 
 app.use(express.json()); // to accept JSON data
