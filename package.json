@@ -4,9 +4,10 @@
   "description": "MERN Chat App",
   "main": "server.js",
   "scripts": {
-  "start": "node backend/server.js",
-  "build": "cd frontend && npm install --legacy-peer-deps && npm run build"
-},
+    "preinstall": "npm install --legacy-peer-deps || true",
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build"
+  },
   "author": "Toh Jing Qiang",
   "license": "ISC",
   "dependencies": {
